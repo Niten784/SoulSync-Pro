@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "main": "expo-router/entry",
   "scripts": {
+  "dev": "EXPO_PACKAGER_PROXY_URL=...",
+  "postinstall": "echo 'Done'",
+  "install:fix": "npm install --legacy-peer-deps"
+  }
     "start": "expo start",
     "android": "expo run:android",
     "ios": "expo run:ios",
