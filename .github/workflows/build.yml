@@ -9,7 +9,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '18'
-      - run: npm install
+      - run:- name: Run npm install
+  run: npm install --legacy-peer-deps
       - run: npx expo prebuild
       - run: npx eas build -p android --profile preview --local --non-interactive
       - uses: actions/upload-artifact@v4
