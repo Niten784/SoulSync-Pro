@@ -7,14 +7,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-      - uses: actions/upload-artifact@v4
-  with:
-    name: SoulSync-Pro.apk
-    path: android/app/build/outputs/apk/release/app-release.apk
         with:
           node-version: '18'
-      - run:- name: Run npm install
-      - run: npm install --legacy-peer-deps
+      - run: npm install --legacy-peer-deps --force
       - run: npx expo prebuild
       - run: npx eas build -p android --profile preview --local --non-interactive
       - uses: actions/upload-artifact@v4
