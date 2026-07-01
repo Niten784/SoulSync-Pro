@@ -9,7 +9,7 @@ jobs:
   build:
     name: Build Android APK
     runs-on: ubuntu-latest
-
+    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -30,6 +30,12 @@ jobs:
         run: npm install --legacy-peer-deps
 
       - name: Build APK via EAS
-        run: eas build --platform android --profile production --non-interactive
+        run: eas build --platform android --profile preview --non-interactive --auto-submit false --output SoulSync-Pro.apk
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: SoulSync-Pro-APK
+          path: SoulSync-Pro.apk
