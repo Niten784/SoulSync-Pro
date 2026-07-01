@@ -21,7 +21,6 @@
         "backgroundColor": "#0A0A0F"
       }
     },
-    "web": {},
     "plugins": [
       "expo-router",
       "expo-font",
@@ -30,9 +29,6 @@
     "extra": {
       "router": {
         "origin": false
-      },
-      "eas": {
-        "projectId": "YOUR_PROJECT_ID_HERE"
       }
     }
   }
