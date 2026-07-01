@@ -12,7 +12,7 @@
     },
     "updates": {
       "fallbackToCacheTimeout": 0,
-      "url": "https://u.expo.dev/YOUR_PROJECT_ID_HERE"
+      "url": "https://u.expo.dev/fcc4cb82-fc3f-47a8-a142-58bec8a67c70"
     },
     "runtimeVersion": {
       "policy": "appVersion"
@@ -38,7 +38,7 @@
         "origin": false
       },
       "eas": {
-        "projectId": "YOUR_PROJECT_ID_HERE"
+        "projectId": "fcc4cb82-fc3f-47a8-a142-58bec8a67c70"
       }
     }
   }
