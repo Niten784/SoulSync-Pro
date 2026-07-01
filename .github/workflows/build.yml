@@ -30,7 +30,7 @@ jobs:
         run: npm install --legacy-peer-deps
 
       - name: Build APK via EAS
-        run: eas build --platform android --profile preview --non-interactive --auto-submit false --output SoulSync-Pro.apk
+        run: eas build --platform android --profile preview --non-interactive --output SoulSync-Pro.apk
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
