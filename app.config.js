@@ -25,7 +25,7 @@ export default {
       package: "com.niten.soulsyncpro",
       adaptiveIcon: {
         foregroundImage: "./assets/adaptive-icon.png",
-        backgroundColor: "#000000"
+        backgroundColor: "#000"
       }
     },
     web: {
@@ -38,11 +38,6 @@ export default {
     ],
     experiments: {
       typedRoutes: true
-    },
-    extra: {
-      eas: {
-        projectId: "fcc4cb82-fc3f-47a8-a142-58bec8a67c70"
-      }
     }
   }
 }
