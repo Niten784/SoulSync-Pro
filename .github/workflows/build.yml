@@ -3,13 +3,14 @@ name: Build SoulSync Pro APK
 on:
   workflow_dispatch:
   push:
-    branches: 
+    branches:
+      - main
 
 jobs:
   build:
     name: Build Android APK
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -18,19 +19,19 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'
 
-      - name: Set up Expo and EAS
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: Setup EAS
         uses: expo/expo-github-action@v8
         with:
-          expo-version: latest
           eas-version: latest
           token: ${{ secrets.EXPO_TOKEN }}
 
-      - name: Install dependencies
-        run: npm install --legacy-peer-deps
-
       - name: Build APK via EAS
-        run: eas build --platform android --profile preview --non-interactive
+        run: eas build --platform android --profile preview --non-interactive --auto-submit
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
