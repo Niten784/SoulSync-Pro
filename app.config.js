@@ -4,7 +4,7 @@ export default {
     slug: "soulsync-pro", 
     extra: {
       eas: {
-        projectId: "a1b2c3d4-5678-90ab-cdef-1234567890ab"
+        projectId: "fcc4cb82-fc3f-47a8-a142-58bec8a67c70"
       }
     },
     android: {
